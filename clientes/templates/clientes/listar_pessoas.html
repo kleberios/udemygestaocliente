@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Clientes</title>
+</head>
+<body>
+<h1> Listando Clientes do Objeto!</h1>
+
+<table>
+  <tr>
+      <td>Nome</td>
+      <td>Sobrenome</td>
+      <td>Idade</td>
+      <td>Salário</td>
+      <td>Foto</td>
+      <td>Excluir</td>
+  </tr>
+    {% for p in p1 %}
+   <tr>
+       <td><a href="{% url 'alterar' p.id %}"> {{ p.primeiro_nome }} </a></td>
+      <td>{{ p.sobrenome }}</td>
+      <td>{{ p.idade}} </td>
+      <td>{{ p.salario }}</td>
+      <td>{{ p.photo }}</td>
+       <td><a href="{%  url 'deletar' p.id %}"> Del</a> </td>
+  </tr>
+    {% endfor %}
+
+</table>
+<br>
+ <a href="{% url 'cadastrar' %}"> Nova Pessoa</a>
+</body>
+</html>

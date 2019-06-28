@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="" method="POST" enctype="multipart/form-data" >
+
+        {% csrf_token %}
+       <h2> Deseja excluir {{ del.primeiro_nome }} da lista? </h2>
+
+        <button type="submit">Excluir</button>
+    </form>
+    <h3><a href=" {% url 'listar' %}"> Cancelar</a> </h3>
+
+</body>
+</html>
